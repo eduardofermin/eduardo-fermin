@@ -29,7 +29,7 @@ public class EduardoFermin {
         
         //Generamos el modelo
         Imc imc=new Imc();
-        ;
+        
         
         System.out.println("El valor del IMC es: " + imc.calcular(u));
     }
