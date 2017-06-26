@@ -20,9 +20,9 @@ public class Aplicacion {
         
         Pregunta p1 = new Pregunta();
         
-        p1.setTitulo("Cual es la capotal de Ucrania");
+        p1.setTitulo("¿Cual es la capotal de Ucrania?");
         
-        ArrayList<Opcion> opciones = new ArrayList<Opcion>();
+        ArrayList<Opcion> opciones = new ArrayList<>();
         opciones.add(op1);
         opciones.add(op2);
         opciones.add(op3);
@@ -30,10 +30,12 @@ public class Aplicacion {
         
         p1.setOpciones(opciones);
         
+        preguntas.add(p1);
+        
         for(Pregunta pre : preguntas){
             System.out.println(pre.getTitulo());
             for (Opcion op : pre.getOpciones()){
-                System.out.println(op.getTitulo() + "estatus" + op.isEstatus());
+                System.out.println(op.getTitulo() + " : " + op.isEstatus());
             }
         }
     }
