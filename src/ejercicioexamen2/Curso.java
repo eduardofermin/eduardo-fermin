@@ -18,9 +18,10 @@ public class Curso {
     public Curso(){  
     }
     
-    public Curso(String nombre, int cuatrimestre, ArrayList<Alumno> alumnos) {
+    public Curso(String nombre, int cuatrimestre, ArrayList<Alumno> alumnos) throws CantidadAlumnosExcepcion{
         this.nombre = nombre;
         this.cuatrimestre = cuatrimestre;
+        ValidarAlumnos.validarNumeroAlumnos(alumnos);
         this.alumnos = alumnos;
     }
 
@@ -44,7 +45,8 @@ public class Curso {
         return alumnos;
     }
 
-    public void setAlumnos(ArrayList<Alumno> alumnos) {
+    public void setAlumnos(ArrayList<Alumno> alumnos) throws CantidadAlumnosExcepcion{
+        ValidarAlumnos.validarNumeroAlumnos(alumnos);
         this.alumnos = alumnos;
     }
 
