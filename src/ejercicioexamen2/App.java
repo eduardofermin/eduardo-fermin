@@ -9,9 +9,9 @@ package ejercicioexamen2;
  *
  * @author T-
  */
-public class ValidarEdad {
-    public static void validarMenorEdad (int edad) throws EdadAlumnoExcepcion{
-        if (edad<18) throw new EdadAlumnoExcepcion();
-    }
-    
+public class App {
+    public static void main(String[] args) throws EdadAlumnoExcepcion {
+        Alumno a1 = new Alumno();
+        a1.setEdad(18);
+    }  
 }

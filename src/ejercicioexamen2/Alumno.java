@@ -17,9 +17,10 @@ public class Alumno {
     public Alumno(){
     }
     
-    public Alumno(int cuenta, String nombre, int edad){
+    public Alumno(int cuenta, String nombre, int edad) throws EdadAlumnoExcepcion{
         this.cuenta=cuenta;
         this.nombre=nombre;
+        ValidarEdad.validarMenorEdad(edad);
         this.edad=edad;
     }
     
@@ -46,4 +47,5 @@ public class Alumno {
     public String getNombre(){
         return nombre;
     }
+    
 }
